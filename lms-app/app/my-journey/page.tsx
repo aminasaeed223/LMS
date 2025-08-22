@@ -9,7 +9,7 @@ import { redirect } from "next/navigation";
 import {
   getUserCompanions,
   getUserSessions,
-  
+ 
 } from "@/lib/actions/companion.actions";
 import Image from "next/image";
 import CompanionsList from "@/components/CompanionsList";
@@ -27,9 +27,9 @@ const Profile = async () => {
     <main className="min-lg:w-3/4">
       <section className="flex justify-between gap-4 max-sm:flex-col items-center">
         <div className="flex gap-4 items-center">
-           <Image
+          <Image
             src={user.imageUrl}
-            alt={user.fullName || "User profile image"} 
+            alt={user.firstName!}
             width={110}
             height={110}
           />
@@ -65,6 +65,8 @@ const Profile = async () => {
         </div>
       </section>
       <Accordion type="multiple">
+        
+          
        
         <AccordionItem value="recent">
           <AccordionTrigger className="text-2xl font-bold">
