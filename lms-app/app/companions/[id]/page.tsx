@@ -6,7 +6,7 @@ import Image from "next/image";
 import CompanionComponent from "@/components/CompanionComponent";
 
 interface CompanionSessionPageProps {
-    params: Promise<{ id: string}>;
+    params: Promise<{ id: strin}>;
 }
 
 const CompanionSession = async ({ params }: CompanionSessionPageProps) => {
